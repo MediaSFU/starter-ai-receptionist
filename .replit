@@ -1,0 +1,7 @@
+run = "npm start"
+onBoot = "npm install"
+language = "nodejs"
+
+[[ports]]
+localPort = 3000
+externalPort = 80

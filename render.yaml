@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: ai-receptionist
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: MEDIASFU_API_USERNAME
+        sync: false
+      - key: MEDIASFU_API_KEY
+        sync: false
+      - key: CALL_WEBHOOK_TOKEN
+        sync: false
+      - key: DASHBOARD_PASSWORD
+        sync: false
+      - key: FORWARD_WEBHOOK_URL
+        sync: false
